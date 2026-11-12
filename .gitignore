@@ -1,2 +1,4 @@
-ets2_beacon.so
-test_harness
+build/
+*.so
+/savecheck
+__pycache__/

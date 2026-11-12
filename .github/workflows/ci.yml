@@ -1,0 +1,12 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    # Bewusst älteres Ubuntu: das Plugin soll auch mit älteren Steam-Runtimes laufen
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: make
+      - run: make test

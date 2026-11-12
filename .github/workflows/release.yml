@@ -1,0 +1,25 @@
+name: Release
+on:
+  push:
+    tags:
+      - "v*"
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: make && make test
+      - name: Archiv packen
+        run: |
+          d=ets2-giants-beacon-${GITHUB_REF_NAME}-linux-x64
+          mkdir -p "$d/udev"
+          cp ets2_giants_beacon.so savecheck install.sh README.md LICENSE.md "$d/"
+          cp udev/99-giants-beacon.rules "$d/udev/"
+          tar czf "$d.tar.gz" "$d"
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ets2-giants-beacon-*-linux-x64.tar.gz
+            ets2_giants_beacon.so
