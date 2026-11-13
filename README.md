@@ -14,6 +14,10 @@
 
 > **English summary:** A native Linux telemetry plugin for ETS2/ATS that drives the GIANTS Software USB beacon (Farming Simulator merch, USB `340d:1710`). The light turns on when you switch on your truck's beacon in-game. It **auto-detects** whether your truck has rotating beacons (→ spin) or LED strobes (→ flash) by reading your save game. Install: download the release, run `./install.sh`. Linux native version of the game only (not Proton).
 
+> **Hinweis zur Entstehung:** Code, Werkzeuge und Dokumentation dieses Projekts hat eine KI (Claude) erstellt. Getestet hat sie ein Mensch, [quadradt](https://github.com/quadradt): im Spiel mit zwei echten GIANTS-Rundumleuchten unter Fedora Linux.
+>
+> *Note: The code, tools and documentation were created by an AI (Claude) and tested by a human ([quadradt](https://github.com/quadradt)) in-game with two real GIANTS beacons on Fedora Linux.*
+
 ## Was es macht
 
 - Du schaltest im Spiel die Rundumleuchte ein, und die echte GIANTS-Leuchte am PC läuft mit. Beim Ausschalten oder Beenden des Spiels geht sie aus.
